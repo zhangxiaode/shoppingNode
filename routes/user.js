@@ -2,11 +2,6 @@
 module.exports = (app, con) => {
     app.get('/user', (req, res) => {
         var sql = `select * from wx_user where openid = '${req.query.openid}'`;
-        res.status(500).send({
-            code: 500,
-            msg: "获取失败",
-            data: null
-        })
         con.query(sql, (err, result) => {
             if (err) {
                 res.status(500)
