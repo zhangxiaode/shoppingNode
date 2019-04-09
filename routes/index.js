@@ -9,6 +9,8 @@ var con = sql.createConnection({
 con.connect();
 module.exports = (app) => {
     require('./user')(app, con)
+    require('./code')(app, con)
+    require('./sms')(app, con)
     // 配置错误处理中间件
     // app.use(function (err, req, res, next) {
     //     res.status(500).send(err.message)
