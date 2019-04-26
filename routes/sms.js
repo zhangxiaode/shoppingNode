@@ -18,9 +18,9 @@ module.exports = (app, con) => {
             apiVersion: '2017-05-25'
         });
         var params = {
-            "RegionId": "cn-hangzhou",
-            "SignName": "zxdkxl",
+            "SignName": "亢亢孝德",
             "TemplateCode": "SMS_163055673",
+            "TemplateParam": "{code:" + randomstr + "}",
             "PhoneNumbers": req.body.phone
         }
         var requestOption = {

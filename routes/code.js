@@ -1,6 +1,9 @@
 var captchapng = require('captchapng');
 module.exports = (app, con) => {
     app.get("/apis/getCode", (req, res) => {
+        if(req.body.type) {
+
+        }
         var code = '0123456789';
         var length = 4;
         var randomcode = '';
@@ -12,7 +15,6 @@ module.exports = (app, con) => {
             req.session.randomcode = {};
         }
         req.session.randomcode = randomcode;
-        console.log(req.session.randomcode)
         // 输出图片
         var p = new captchapng(80, 30, parseInt(randomcode)); // width,height,numeric captcha
         p.color(255, 255, 255, 255); // First color: background (red, green, blue, alpha)
