@@ -16,6 +16,8 @@ app.all('*', (req, res, next) => {
 });
 //session设置
 app.use(session({
+    saveUninitialized: true,
+    resave: false,
     secret: 'zxd app', //secret的值建议使用随机字符串
     cookie: { maxAge: 60 * 1000 * 30 } // 过期时间（毫秒）
 }));

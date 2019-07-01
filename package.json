@@ -18,6 +18,8 @@
   "devDependencies": {
     "axios": "^0.18.0",
     "crypto": "^1.0.1",
-    "express-session": "^1.15.6"
+    "express-session": "^1.15.6",
+    "forever": "^1.0.0",
+    "nodejs-websocket": "^1.7.2"
   }
 }
